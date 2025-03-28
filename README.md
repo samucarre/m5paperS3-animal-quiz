@@ -6,7 +6,7 @@ Touch the correct animal that matches the given name. Tracks correct and incorre
 ---
 ## 📸 Screenshot
 
-<img src="Source/Readme/screen1.jpg" alt="Screenshot" width="300"/>
+<img src="Sources/Readme/screen1.jpg" alt="Screenshot" width="300"/>
 
 ---
 
