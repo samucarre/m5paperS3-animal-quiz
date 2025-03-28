@@ -74,7 +74,7 @@ m5paperS3-animal-quiz.py
 
 ## 📸 Screenshot
 
-![screenshot-placeholder](screenshot.jpg)
+![Screenshot](Source/Readme/screen1.jpg)
 
 ---
 
