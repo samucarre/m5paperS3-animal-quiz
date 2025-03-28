@@ -42,12 +42,14 @@ Touch the correct animal that matches the given name. Tracks correct and incorre
 
 ## 📂 File Structure
 
+```
 /flash/
 ├── Bear.png
 ├── Dog.png
 ├── Elephant.png
 └── … (all your animal images)
 m5paperS3-animal-quiz.py
+```
 
 ---
 
