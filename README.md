@@ -12,10 +12,11 @@ Touch the correct animal that matches the given name. Tracks correct and incorre
 
 ## 🚧 Version
 
-**Current Version: 0.1**
+**Current Version: 0.2**
 
-> ⚠️ This is an early prototype. Features and structure may change in future versions.  
-> Feedback, suggestions, and contributions are very welcome!
+🚀 New features included in this version: splash screen and OFF button.
+The game now starts with a welcome image and allows the user to exit cleanly.
+Feedback, suggestions, and contributions are very welcome!
 
 ---
 
@@ -79,9 +80,20 @@ m5paperS3-animal-quiz.py
 ---
 
 
-## 💡 Inspiration
+## 🚧 Future Plans & Collaboration
 
-Built for my 3-year-old son who loves animals and touching screens 😄
+This project is just the beginning!
+I would love to expand this animal quiz into a broader educational game, including:
+	•	More animals, sounds, and animations
+	•	Categories (e.g., farm animals, wild animals, sea creatures)
+	•	Support for multiple languages
+	•	Quizzes based on sounds or silhouettes
+	•	A “learn” mode before quizzing
+
+If you’d like to help — especially by finding or creating images, suggesting features, or testing on devices — feel free to reach out!
+Contact: samuelcarre@mac.com
+
+Contributions and ideas are always welcome 💡
 
 ---
 
