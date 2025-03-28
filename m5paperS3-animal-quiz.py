@@ -1,12 +1,20 @@
-# Juego educativo con batería y contador de aciertos y fallos
+# ------------------------------------------------------------
+# 📱 Project: m5paperS3-animal-quiz
+# 🧠 Description: Educational animal quiz game using M5Paper S3
+# 🧑‍💻 Author: Samuel Carreño
+# 📧 Contact: samuelcarre@mac.com
+# 🗓️ Version: 0.2
+# 🪪 License: MIT License (Feel free to use, modify and share)
+# ------------------------------------------------------------
 import M5
 from M5 import *
 import time
 import random
+import sys
 
 M5.begin()
 lcd = M5.Lcd
-lcd.setRotation(0)
+lcd.setRotation(0)  # Vertical: 540x960
 lcd.clear()
 lcd.setTextColor(0x000000, 0xFFFFFF)
 lcd.setTextSize(2)
@@ -62,36 +70,61 @@ def mostrar_bateria():
 def mostrar_puntos():
     lcd.setTextSize(2)
     lcd.setTextColor(0x000000, 0xFFFFFF)
-    lcd.fillRect(860, 10, 90, 40, 0xFFFFFF)
-    lcd.setCursor(860, 10)
+    lcd.fillRect(400, 10, 120, 40, 0xFFFFFF)
+    lcd.setCursor(1, 30)
     lcd.print("Score {}".format(score))
-    lcd.setCursor(860, 35)
+    lcd.setCursor(1, 50)
     lcd.print("Fails {}".format(fails))
+
+def mostrar_boton_apagado():
+    lcd.drawRect(460, 925, 80, 30, 0x000000)
+    lcd.setCursor(475, 935)
+    lcd.setTextSize(2)
+    lcd.print("OFF")
+
+def apagar_dispositivo():
+    lcd.clear()
+    lcd.setTextColor(0x000000, 0xFFFFFF)
+    lcd.setTextSize(7)
+    lcd.setCursor(170, 200)
+    lcd.print("Bye!")
+    lcd.setTextSize(2)
+    lcd.setCursor(30, 270)
+    lcd.print("Please hold the power button to turn off")
+    time.sleep(5)
+    sys.exit()
+
+def mostrar_splash():
+    lcd.clear()
+    try:
+        lcd.drawPng("/flash/splash.png", 0, 0)
+    except Exception as e:
+        print("❌ Error al cargar splash:", e)
+        lcd.setCursor(150, 200)
+        lcd.setTextSize(12)
+        lcd.print("Animal Quiz!")
+    time.sleep(3)
 
 def nuevo_juego():
     global correct_animal, options
     lcd.clear()
     mostrar_bateria()
     mostrar_puntos()
-
+    mostrar_boton_apagado()
     lcd.setCursor(150, 30)
     lcd.setTextSize(3)
     lcd.setTextColor(0x000000, 0xFFFFFF)
     lcd.print("Which one is...")
-
     correct_animal = random.choice(animal_list)
     lcd.setCursor(150, 100)
     lcd.setTextSize(4)
     lcd.print(correct_animal.split(".")[0])
-
     opciones_temp = [a for a in animal_list if a != correct_animal]
     shuffle_list(opciones_temp)
     opciones = opciones_temp[:2] + [correct_animal]
     shuffle_list(opciones)
-
     options.clear()
     options.extend(opciones)
-
     for i in range(3):
         x, y = positions[i]
         try:
@@ -99,8 +132,10 @@ def nuevo_juego():
         except Exception as e:
             print("❌ Error al cargar", options[i], ":", e)
 
+# Init
 M5.update()
 last_touch = (M5.Touch.getX(), M5.Touch.getY())
+mostrar_splash()
 nuevo_juego()
 
 while True:
@@ -108,8 +143,15 @@ while True:
     x = M5.Touch.getX()
     y = M5.Touch.getY()
 
+    # print("Toque en:", x, y)  # ← descomenta para depurar
+
     if (x, y) != last_touch:
         last_touch = (x, y)
+
+        # Corregido: coordenadas reales del botón OFF (parte inferior derecha)
+        if 460 <= x <= 540 and 925 <= y <= 955:
+            apagar_dispositivo()
+
         for i in range(3):
             bx, by = positions[i]
             if dentro_imagen(x, y, bx, by):
