@@ -1,11 +1,4 @@
-# ------------------------------------------------------------
-# 📱 Project: m5paperS3-animal-quiz
-# 🧠 Description: Educational animal quiz game using M5Paper S3
-# 🧑‍💻 Author: Samuel Carreño
-# 📧 Contact: samuelcarre@mac.com
-# 🗓️ Version: 0.2
-# 🪪 License: MIT License (Feel free to use, modify and share)
-# ------------------------------------------------------------
+# Juego educativo con batería, aciertos, fallos y botón de apagado + pantalla de inicio
 import M5
 from M5 import *
 import time
@@ -91,8 +84,9 @@ def apagar_dispositivo():
     lcd.setTextSize(2)
     lcd.setCursor(30, 270)
     lcd.print("Please hold the power button to turn off")
-    time.sleep(5)
-    sys.exit()
+   # Esperar indefinidamente sin reiniciar
+    while True:
+        time.sleep(1)
 
 def mostrar_splash():
     lcd.clear()
