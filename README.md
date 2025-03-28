@@ -3,6 +3,10 @@
 An educational image-based quiz game designed for children, built for the **M5Paper S3** using **MicroPython (UIFlow 2.0)**.
 
 Touch the correct animal that matches the given name. Tracks correct and incorrect answers, and shows battery status too!
+---
+## 📸 Screenshot
+
+<img src="Source/Readme/screen1.jpg" alt="Screenshot" width="300"/>
 
 ---
 
