@@ -76,11 +76,6 @@ m5paperS3-animal-quiz.py
 
 ---
 
-## 📸 Screenshot
-
-![Screenshot](Sources/Readme/screen1.jpg)
-
----
 
 ## 💡 Inspiration
 
