@@ -72,15 +72,16 @@ m5paperS3-animal-quiz.py
 
 ## 🔥 Install via M5Burner
 
-You can easily install this game using M5Burner.
-The .bin firmware file is already uploaded to the M5Burner firmware list and can be installed automatically.
-	1.	Open M5Burner on your computer.
-	2.	Select m5paperS3-animal-quiz from the firmware list.
-	3.	Connect your M5Paper S3 via USB.
-	4.	Click Burn to flash the firmware.
-	5.	Once installed, the game will launch automatically.
+You can easily install this game using [M5Burner](https://shop.m5stack.com/pages/download).  
+The `.bin` firmware file is already uploaded to the M5Burner firmware list and can be installed automatically.
 
-💡 No need to manually upload code or images — everything is already embedded in the firmware.
+1. Open **M5Burner** on your computer.  
+2. Select **m5paperS3-animal-quiz** from the firmware list.  
+3. Connect your **M5Paper S3** via USB.  
+4. Click **Burn** to flash the firmware.  
+5. Once installed, the game will launch automatically.
+
+> 💡 No need to manually upload code or images — everything is already embedded in the firmware.
 
 ---
 
