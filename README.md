@@ -11,11 +11,16 @@ Touch the correct animal that matches the given name. Tracks correct and incorre
 
 ## 🚧 Version
 
-**Current Version: 0.2**
+**Current Version: v0.3**
 
-🚀 New features included in this version: splash screen and OFF button.
-The game now starts with a welcome image and allows the user to exit cleanly.
-Feedback, suggestions, and contributions are very welcome!
+🆕 New in Version 0.3: Audio Feedback
+
+Multisensory Learning Experience:
+
+Immediate audio reinforcement for learning
+Positive sound (C-E-G triad) rewards correct answers
+Gentle negative tone guides incorrect attempts
+Non-intrusive, pedagogically appropriate feedback
 
 ---
 
