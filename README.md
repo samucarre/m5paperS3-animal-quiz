@@ -1,4 +1,4 @@
-# 🐾 M5PaperS3 Animal Quiz Game  – M5Paper S3 (v0.2)
+# 🐾 M5PaperS3 Animal Quiz Game  – M5Paper S3 (v0.3)
 
 An educational image-based quiz game designed for children, built for the **M5Paper S3** using **MicroPython (UIFlow 2.0)**.
 
